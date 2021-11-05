@@ -4,8 +4,15 @@ Scans event titles for a specific keywords and changes the event attributes
 
 function myFunction() {
  
-  let calName = "Work"; //The name of the calendar to modify
-  daysBackwards = 2; daysForward = 10; // The date range for scanning for events whenever the script runs
+  // =========== GETTING CALENDAR NAME =================
+ 
+ //Uncomment the next line to get calendar names. Comment it back when done
+ //let cals = CalendarApp.getAllCalendars(); for(let c in cals){Logger.log(cals[c].getName())}; return; 
+
+  // =========== CONFIGURATION =================
+ 
+  let calName = "john.smith@gmail.com"; //The name of the calendar to modify
+  daysBackwards = 5; daysForward = 30; // The date range for scanning for events whenever the script runs
 
 /*
 - prefix - case insensitive. Searches in the beginning of the event title
@@ -27,7 +34,8 @@ function myFunction() {
     },
   ]
 
-
+  // =========== END OF CONFIGURATION =================
+  
   let calId = CalendarApp.getCalendarsByName(calName)[0].getId();
   
   let startDate = new Date();
