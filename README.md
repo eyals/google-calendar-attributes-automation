@@ -1,5 +1,7 @@
 # Google Calendar Event Attributes Automation
 
+**Follow the configuration steps below for it to run on your calendar**
+
 ### Intro
 This script allows you to automatically set some properties of an event based on the event title prefix.
 
